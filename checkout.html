@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="shortcut icon" href="logo without text.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <center>
+            <nav class="Navigation">
+                <a href="index.html" class="logo">
+                    <span class="Go">GO</span> <span class="grocer">grocer</span>
+                </a>
+                <section class="header">
+                    <ul class="menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="Dairy Products.html" class="nav-link">Dairy Products</a></li>
+                        <li><a href="Vegetables.html" class="nav-link">Vegetables</a></li>
+                        <li><a href="Cosmetics.html" class="nav-link">Cosmetics</a></li>
+                        <li><a href="Order Page.html" class="nav-link">Order Page</a></li>
+                        <li><a href="About US.html" class="nav-link">About Us</a></li>
+                        <li><a href="Loyalty Registration.html" class="nav-link">Loyalty Registration</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </center>
+    </header>
+    <div id="checkout-container">
+        <h1 id="checkout-heading">Checkout From Here</h1>
+        <div id="total-cost-display">
+            <table id="checkout-summary-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity (Kg/product)</th>
+                        <th>Unit Price (Rs.)</th>
+                        <th>Total Price (Rs.)</th>
+                    </tr>
+                </thead>
+                <tbody id="order-summary-body"></tbody>
+            </table>
+            <div class="total-amount">
+                <span>Total Amount: Rs. </span><span id="total-cost">0</span>
+            </div>
+        </div>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="name">Full Name With Initials:</label>
+                <input type="text" id="name" name="name" required class="checkout-input">
+            </div>
+            <div class="form-group">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" required class="checkout-input">
+            </div>
+            <div class="form-group">
+                <label for="delivery-method">Delivery Method:</label>
+                <select id="delivery-method" name="delivery-method" required class="checkout-select">
+                    <option value="standard">Standard</option>
+                    <option value="express">Express</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required class="checkout-select">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash-on-delivery">Cash On Delivery</option>
+                </select>
+            </div>
+            <button type="submit" id="submit-button" class="checkout-button">Submit</button>
+        </form>
+        <div id="thank-you-message" style="display:none;">
+            <h2 id="thank-you-heading">Thank you for your purchase!</h2>
+            <p>Your order was placed at <span id="purchase-time"></span>.</p>
+            <p>Expected Delivery Date: <span id="expected-delivery-date"></span></p>
+        </div>
+    </div>
+    <script src="order.js"></script>
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="normal_footer_pages"><a href="index.html">Home Page</a></li>
+                    <li class="normal_footer_pages"><a href="Dairy Products.html">Dairy Products</a></li>
+                    <li class="normal_footer_pages"><a href="Vegetables.html">Vegetables</a></li>
+                    <li class="active_footer"><a href="Order Page.html">Go To Order Page</a></li>
+                    <li class="normal_footer_pages"><a href="About US.html">About Us</a></li>
+                    <li class="normal_footer_pages"><a href="Order Page.html">Cosmetics</a></li>
+                    <li class="normal_footer_pages"><a href="Loyalty Registration.html">Loyalty Registration</a></li>
+                </ul>
+            </div>
+            <div class="row_copyright">
+                Copyright © 2024 Hisham Hassan (CB012741)
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
